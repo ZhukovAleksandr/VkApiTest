@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FriendsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    FriendsViewController *vc = [[FriendsViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [_window addSubview:nav.view];
+    [_window makeKeyAndVisible];
+
+    
     // Override point for customization after application launch.
     return YES;
 }
